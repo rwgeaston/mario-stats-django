@@ -1,0 +1,290 @@
+[
+    {
+        "model": "mario_stats.character",
+        "pk": 82,
+        "fields": {
+            "name": "Baby Mario",
+            "weight_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 83,
+        "fields": {
+            "name": "Baby Luigi",
+            "weight_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 84,
+        "fields": {
+            "name": "Baby Peach",
+            "weight_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 85,
+        "fields": {
+            "name": "Baby Daisy",
+            "weight_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 86,
+        "fields": {
+            "name": "Baby Rosalina",
+            "weight_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 87,
+        "fields": {
+            "name": "Lemmy",
+            "weight_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 88,
+        "fields": {
+            "name": "Toad",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 89,
+        "fields": {
+            "name": "Koopa Troopa",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 90,
+        "fields": {
+            "name": "Shy Guy",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 91,
+        "fields": {
+            "name": "Lakitu",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 92,
+        "fields": {
+            "name": "Toadette",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 93,
+        "fields": {
+            "name": "Larry",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 94,
+        "fields": {
+            "name": "Wendy",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 95,
+        "fields": {
+            "name": "Isabelle",
+            "weight_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 96,
+        "fields": {
+            "name": "Cat Peach",
+            "weight_class": 3
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 97,
+        "fields": {
+            "name": "Villager (female)",
+            "weight_class": 3
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 98,
+        "fields": {
+            "name": "Peach",
+            "weight_class": 4
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 99,
+        "fields": {
+            "name": "Daisy",
+            "weight_class": 4
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 100,
+        "fields": {
+            "name": "Yoshi",
+            "weight_class": 4
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 101,
+        "fields": {
+            "name": "Mario",
+            "weight_class": 6
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 102,
+        "fields": {
+            "name": "Tanooki Mario",
+            "weight_class": 5
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 103,
+        "fields": {
+            "name": "Villager (male)",
+            "weight_class": 5
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 104,
+        "fields": {
+            "name": "Luigi",
+            "weight_class": 6
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 105,
+        "fields": {
+            "name": "Ludwig",
+            "weight_class": 6
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 106,
+        "fields": {
+            "name": "Iggy",
+            "weight_class": 6
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 107,
+        "fields": {
+            "name": "Donkey Kong",
+            "weight_class": 7
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 108,
+        "fields": {
+            "name": "Waluigi",
+            "weight_class": 7
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 109,
+        "fields": {
+            "name": "Rosalina",
+            "weight_class": 7
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 110,
+        "fields": {
+            "name": "Roy",
+            "weight_class": 7
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 111,
+        "fields": {
+            "name": "Link",
+            "weight_class": 7
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 112,
+        "fields": {
+            "name": "Metal Mario",
+            "weight_class": 8
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 113,
+        "fields": {
+            "name": "Pink Gold Peach",
+            "weight_class": 8
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 114,
+        "fields": {
+            "name": "Bowser",
+            "weight_class": 9
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 115,
+        "fields": {
+            "name": "Wario",
+            "weight_class": 9
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 116,
+        "fields": {
+            "name": "Morton",
+            "weight_class": 9
+        }
+    },
+    {
+        "model": "mario_stats.character",
+        "pk": 117,
+        "fields": {
+            "name": "Dry Bowser",
+            "weight_class": 9
+        }
+    }
+]

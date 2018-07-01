@@ -1,0 +1,359 @@
+[
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 24,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Normal Tyres"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 24,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 25,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Normal Blue"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 25,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 26,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.75,
+            "grip": 0.75,
+            "name": "Monster"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 26,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 27,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.75,
+            "grip": 0.75,
+            "name": "Funky Monster"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 27,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 28,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0.0,
+            "grip": -1.0,
+            "name": "Slick"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 28,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 29,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0.0,
+            "grip": -1.0,
+            "name": "Cyber Slick"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 29,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 30,
+        "fields": {
+            "speed": -0.5,
+            "acceleration": 1.0,
+            "weight": -0.5,
+            "handling": 0.25,
+            "grip": -0.25,
+            "name": "Roller"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 30,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 31,
+        "fields": {
+            "speed": -0.5,
+            "acceleration": 1.0,
+            "weight": -0.5,
+            "handling": 0.25,
+            "grip": -0.25,
+            "name": "Azure Roller"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 31,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 32,
+        "fields": {
+            "speed": -0.5,
+            "acceleration": 1.0,
+            "weight": -0.5,
+            "handling": 0.25,
+            "grip": -0.25,
+            "name": "Button"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 32,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 33,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": -0.25,
+            "weight": 0.0,
+            "handling": 0.25,
+            "grip": -0.5,
+            "name": "Slim"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 33,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 34,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": -0.25,
+            "weight": 0.0,
+            "handling": 0.25,
+            "grip": -0.5,
+            "name": "Crimson Slim"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 34,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 35,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Offroad"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 35,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 36,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Retro Off-road"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 36,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 37,
+        "fields": {
+            "speed": -0.25,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": -0.25,
+            "grip": 0.5,
+            "name": "Wooden"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 37,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 38,
+        "fields": {
+            "speed": -0.25,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": -0.25,
+            "grip": 0.5,
+            "name": "Sponge"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 38,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 39,
+        "fields": {
+            "speed": -0.25,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": -0.25,
+            "grip": 0.5,
+            "name": "Cushion"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 39,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 40,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": 0.0,
+            "grip": -0.5,
+            "name": "Metal"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 40,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 41,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": 0.0,
+            "grip": -0.5,
+            "name": "Gold Tyres"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 41,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 42,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "GLA Tyres"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 42,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 43,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": -0.25,
+            "weight": 0,
+            "handling": 0.25,
+            "grip": -0.5,
+            "name": "TriForce Tyres"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 43,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 44,
+        "fields": {
+            "speed": -0.5,
+            "acceleration": 1.0,
+            "weight": -0.5,
+            "handling": 0.25,
+            "grip": -0.25,
+            "name": "Leaf Tyres"
+        }
+    },
+    {
+        "model": "mario_stats.tyre",
+        "pk": 44,
+        "fields": {}
+    }
+]

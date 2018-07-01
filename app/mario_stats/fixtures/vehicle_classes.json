@@ -1,0 +1,30 @@
+[
+    {
+        "model": "mario_stats.vehicleclass",
+        "pk": 1,
+        "fields": {
+            "vehicle_type": "Kart"
+        }
+    },
+    {
+        "model": "mario_stats.vehicleclass",
+        "pk": 2,
+        "fields": {
+            "vehicle_type": "Bike"
+        }
+    },
+    {
+        "model": "mario_stats.vehicleclass",
+        "pk": 3,
+        "fields": {
+            "vehicle_type": "Bike (in)"
+        }
+    },
+    {
+        "model": "mario_stats.vehicleclass",
+        "pk": 4,
+        "fields": {
+            "vehicle_type": "Quad"
+        }
+    }
+]

@@ -1,0 +1,705 @@
+[
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 45,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Standard Kart"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 45,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 46,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Cat Cruiser"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 46,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 47,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Prancer"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 47,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 48,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Bounder"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 48,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 49,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0.0,
+            "grip": -1.0,
+            "name": "Mach 8"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 49,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 50,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0.0,
+            "grip": -1.0,
+            "name": "Sports Coupe"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 50,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 51,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.5,
+            "grip": 0.5,
+            "name": "Badwagon"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 51,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 52,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.5,
+            "grip": 0.5,
+            "name": "Tri-Speeder"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 52,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 53,
+        "fields": {
+            "speed": -0.75,
+            "acceleration": 1.25,
+            "weight": -0.5,
+            "handling": 0.5,
+            "grip": -0.25,
+            "name": "Buggybud"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 53,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 54,
+        "fields": {
+            "speed": -0.75,
+            "acceleration": 1.25,
+            "weight": -0.5,
+            "handling": 0.5,
+            "grip": -0.25,
+            "name": "Landship"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 54,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 55,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0.0,
+            "grip": -1.0,
+            "name": "Circuit Special"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 55,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 56,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.5,
+            "grip": -0.5,
+            "name": "Pipe Frame"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 56,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 57,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.5,
+            "grip": 0.5,
+            "name": "Steel Driver"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 57,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 58,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0.0,
+            "grip": -1.0,
+            "name": "Gold Standard"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 58,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 59,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.5,
+            "grip": -0.5,
+            "name": "Standard Bike"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 59,
+        "fields": {
+            "vehicle_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 60,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.75,
+            "weight": -0.25,
+            "handling": 0.75,
+            "grip": -1.25,
+            "name": "Sport Bike"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 60,
+        "fields": {
+            "vehicle_class": 3
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 61,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.75,
+            "weight": -0.25,
+            "handling": 0.75,
+            "grip": -1.25,
+            "name": "Yoshi Bike"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 61,
+        "fields": {
+            "vehicle_class": 3
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 62,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.75,
+            "weight": -0.25,
+            "handling": 0.75,
+            "grip": -1.25,
+            "name": "Jet Bike"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 62,
+        "fields": {
+            "vehicle_class": 3
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 63,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.75,
+            "weight": -0.25,
+            "handling": 0.75,
+            "grip": -1.25,
+            "name": "Comet"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 63,
+        "fields": {
+            "vehicle_class": 3
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 64,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.5,
+            "grip": -0.5,
+            "name": "Varmint"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 64,
+        "fields": {
+            "vehicle_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 65,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.5,
+            "grip": -0.5,
+            "name": "Flame Rider"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 65,
+        "fields": {
+            "vehicle_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 66,
+        "fields": {
+            "speed": -0.75,
+            "acceleration": 1.25,
+            "weight": -0.5,
+            "handling": 0.5,
+            "grip": -0.25,
+            "name": "Mr. Scooty"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 66,
+        "fields": {
+            "vehicle_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 67,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "The Duke"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 67,
+        "fields": {
+            "vehicle_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 68,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.5,
+            "grip": 0.5,
+            "name": "Standard Quad"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 68,
+        "fields": {
+            "vehicle_class": 4
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 69,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Teddy Buggy"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 69,
+        "fields": {
+            "vehicle_class": 4
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 70,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.5,
+            "grip": -0.5,
+            "name": "Wild Wiggler"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 70,
+        "fields": {
+            "vehicle_class": 4
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 71,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.5,
+            "grip": 0.5,
+            "name": "Mercedes GLA"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 71,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 72,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.5,
+            "grip": -0.5,
+            "name": "Mercedes W 25 Silver Arrow"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 72,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 73,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Mercedes 300 SL Roadster"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 73,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 74,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0,
+            "grip": -0.5,
+            "name": "Blue Falcon"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 74,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 75,
+        "fields": {
+            "speed": 0,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": -0.25,
+            "grip": 0.25,
+            "name": "Tanooki Kart"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 75,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 76,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0,
+            "grip": -1,
+            "name": "B Dasher"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 76,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 77,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": 0,
+            "weight": 0,
+            "handling": 0.5,
+            "grip": -0.75,
+            "name": "Master Cycle"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 77,
+        "fields": {
+            "vehicle_class": 3
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 78,
+        "fields": {
+            "speed": 0.25,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0,
+            "grip": -0.5,
+            "name": "Streetle"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 78,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 79,
+        "fields": {
+            "speed": 0.5,
+            "acceleration": -0.25,
+            "weight": 0.25,
+            "handling": 0,
+            "grip": -1,
+            "name": "P-Wing"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 79,
+        "fields": {
+            "vehicle_class": 1
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 80,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.5,
+            "grip": -0.5,
+            "name": "City Tripper"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 80,
+        "fields": {
+            "vehicle_class": 2
+        }
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 81,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": -0.5,
+            "weight": 0.5,
+            "handling": -0.5,
+            "grip": 0.5,
+            "name": "Bone Rattler"
+        }
+    },
+    {
+        "model": "mario_stats.vehicle",
+        "pk": 81,
+        "fields": {
+            "vehicle_class": 4
+        }
+    }
+]

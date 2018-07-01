@@ -1,0 +1,240 @@
+[
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 10,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Super Glider"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 10,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 11,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Wario Wing"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 11,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 12,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Waddle Wing"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 12,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 13,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Plane Glider"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 13,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 14,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Cloud Glider"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 14,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 15,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Flower Glider"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 15,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 16,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Bowser Kite"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 16,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 17,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Parafoil"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 17,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 18,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "MKTV Parafoil"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 18,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 19,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Peach Parasol"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 19,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 20,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Parachute"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 20,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 21,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Gold Glider"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 21,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 22,
+        "fields": {
+            "speed": 0,
+            "acceleration": 0.25,
+            "weight": -0.25,
+            "handling": 0,
+            "grip": 0,
+            "name": "Hylian Kite"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 22,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 23,
+        "fields": {
+            "speed": 0.0,
+            "acceleration": 0.0,
+            "weight": 0.0,
+            "handling": 0.0,
+            "grip": 0.0,
+            "name": "Paper Glider"
+        }
+    },
+    {
+        "model": "mario_stats.glider",
+        "pk": 23,
+        "fields": {}
+    }
+]

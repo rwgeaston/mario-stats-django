@@ -1,0 +1,155 @@
+[
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 1,
+        "fields": {
+            "speed": 2.25,
+            "acceleration": 3.25,
+            "weight": 2.25,
+            "handling": 4.75,
+            "grip": 4.5,
+            "name": "babyweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 1,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 2,
+        "fields": {
+            "speed": 2.75,
+            "acceleration": 3.0,
+            "weight": 2.75,
+            "handling": 4.25,
+            "grip": 4.25,
+            "name": "featherweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 2,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 3,
+        "fields": {
+            "speed": 3.25,
+            "acceleration": 3,
+            "weight": 3,
+            "handling": 3.75,
+            "grip": 4.0,
+            "name": "sub-lightweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 3,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 4,
+        "fields": {
+            "speed": 3.25,
+            "acceleration": 2.75,
+            "weight": 3.25,
+            "handling": 3.75,
+            "grip": 4.0,
+            "name": "lightweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 4,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 5,
+        "fields": {
+            "speed": 3.75,
+            "acceleration": 2.75,
+            "weight": 3.5,
+            "handling": 3.25,
+            "grip": 3.75,
+            "name": "sub-midweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 5,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 6,
+        "fields": {
+            "speed": 3.75,
+            "acceleration": 2.5,
+            "weight": 3.75,
+            "handling": 3.25,
+            "grip": 3.75,
+            "name": "midweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 6,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 7,
+        "fields": {
+            "speed": 4.25,
+            "acceleration": 2.25,
+            "weight": 4.25,
+            "handling": 2.75,
+            "grip": 3.5,
+            "name": "cruiserweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 7,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 8,
+        "fields": {
+            "speed": 4.25,
+            "acceleration": 2.0,
+            "weight": 4.75,
+            "handling": 2.75,
+            "grip": 3.25,
+            "name": "metalweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 8,
+        "fields": {}
+    },
+    {
+        "model": "mario_stats.vehiclecomponent",
+        "pk": 9,
+        "fields": {
+            "speed": 4.75,
+            "acceleration": 2.0,
+            "weight": 4.75,
+            "handling": 2.25,
+            "grip": 3.25,
+            "name": "heavyweight"
+        }
+    },
+    {
+        "model": "mario_stats.weightclass",
+        "pk": 9,
+        "fields": {}
+    }
+]
