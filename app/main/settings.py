@@ -12,6 +12,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'mario_stats',
 ]
 
 MIDDLEWARE = [
