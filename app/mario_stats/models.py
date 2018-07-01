@@ -26,34 +26,36 @@ class PlayerHandicapSnapshot(models.Model):
 class VehicleClass(models.Model):
     vehicle_type = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.vehicle_type
 
-class StatDifference(models.Model):
+
+class VehicleComponent(models.Model):
+    name = models.CharField(max_length=20)
     speed = models.DecimalField(max_digits=4, decimal_places=2)
     acceleration = models.DecimalField(max_digits=4, decimal_places=2)
     weight = models.DecimalField(max_digits=4, decimal_places=2)
     handling = models.DecimalField(max_digits=4, decimal_places=2)
     grip = models.DecimalField(max_digits=4, decimal_places=2)
 
+    def __str__(self):
+        return f'{self.name} ({self.speed}/{self.acceleration}/{self.weight}/{self.handling}/{self.grip})'
 
-class Vehicle(models.Model):
-    name = models.CharField(max_length=20)
+
+class Vehicle(VehicleComponent):
     vehicle_class = models.ForeignKey(VehicleClass, on_delete=models.PROTECT)
-    stat_difference = models.ForeignKey(StatDifference, on_delete=models.PROTECT)
 
 
-class WeightClass(models.Model):
-    name = models.CharField(max_length=10)
-    stat_difference = models.ForeignKey(StatDifference, on_delete=models.PROTECT)
+class WeightClass(VehicleComponent):
+    pass
 
 
-class Tyre(models.Model):
-    name = models.CharField(max_length=20)
-    stat_difference = models.ForeignKey(StatDifference, on_delete=models.PROTECT)
+class Tyre(VehicleComponent):
+    pass
 
 
-class Glider(models.Model):
-    name = models.CharField(max_length=20)
-    stat_difference = models.ForeignKey(StatDifference, on_delete=models.PROTECT)
+class Glider(VehicleComponent):
+    pass
 
 
 class Character(models.Model):
@@ -74,6 +76,6 @@ class Player(models.Model):
 
     class __meta__:
         unique_together = (
-            'game',
-            'position',
+            ('game', 'position'),
+            ('game', 'person'),
         )
