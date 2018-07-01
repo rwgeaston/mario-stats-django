@@ -1,7 +1,7 @@
 #!/bin/bash
 ln -sf "$PWD/test.sh" .git/hooks/pre-commit
 
-pylint app;
+(cd app; pylint app);
 rc=$?;
 if [[ $rc != 0 ]];
 then

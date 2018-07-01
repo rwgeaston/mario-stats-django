@@ -9,6 +9,7 @@ from .models import (
     Tyre,
     Glider,
     WeightClass,
+    Character,
 )
 
 admin.site.register(Tyre)
@@ -17,6 +18,7 @@ admin.site.register(VehicleClass)
 admin.site.register(WeightClass)
 admin.site.register(Vehicle)
 admin.site.register(Person)
+admin.site.register(Character)
 
 
 class PlayerInline(admin.StackedInline):

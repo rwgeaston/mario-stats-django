@@ -5,12 +5,28 @@ class Person(models.Model):
     name = models.CharField(max_length=30)
     handicap = models.DecimalField(max_digits=4, decimal_places=2)
 
+    def __str__(self):
+        return self.name
+
 
 class Game(models.Model):
-    red_score = models.IntegerField()
-    submission_timestamp = models.DateTimeField()
+    red_score = models.IntegerField(null=True, blank=True)
+    submission_timestamp = models.DateTimeField(null=True, blank=True)
     ian_watched = models.BooleanField(default=False)
     forced_team_selection = models.BooleanField(default=False)
+
+    def __str__(self):
+        players = list(self.players.all())
+        reds = [player for player in players if player.red_team]
+        blues = [player for player in players if not player.red_team]
+        red_team = '{} & {}'.format(*reds)
+        blue_team = '{} & {}'.format(*blues)
+        if self.submission_timestamp:
+            submission_string = self.submission_timestamp.isoformat()
+        else:
+            submission_string = 'unplayed'
+
+        return f'{red_team} vs {blue_team} ({submission_string})'
 
 
 class HandicapSnapshot(models.Model):
@@ -62,11 +78,14 @@ class Character(models.Model):
     name = models.CharField(max_length=20)
     weight_class = models.ForeignKey(WeightClass, on_delete=models.PROTECT)
 
+    def __str__(self):
+        return self.name
+
 
 class Player(models.Model):
     person = models.ForeignKey(Person, on_delete=models.PROTECT)
-    game = models.ForeignKey(Game, on_delete=models.PROTECT)
-    position = models.IntegerField()
+    game = models.ForeignKey(Game, on_delete=models.PROTECT, related_name='players')
+    seat_position = models.IntegerField()
     vehicle = models.ForeignKey(Vehicle, on_delete=models.PROTECT)
     red_team = models.BooleanField()
     character = models.ForeignKey(Character, on_delete=models.PROTECT)
@@ -79,3 +98,6 @@ class Player(models.Model):
             ('game', 'position'),
             ('game', 'person'),
         )
+
+    def __str__(self):
+        return self.person.name
