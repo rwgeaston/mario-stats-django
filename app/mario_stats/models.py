@@ -64,7 +64,7 @@ class VehicleClass(models.Model):
 
 
 class VehicleComponent(models.Model):
-    name = models.CharField(max_length=20, unique=True)
+    name = models.CharField(max_length=30, unique=True)
     speed = models.DecimalField(max_digits=4, decimal_places=2)
     acceleration = models.DecimalField(max_digits=4, decimal_places=2)
     weight = models.DecimalField(max_digits=4, decimal_places=2)
