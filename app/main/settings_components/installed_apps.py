@@ -8,6 +8,7 @@ INSTALLED_APPS = [
 
     'nested_admin',
     'rest_framework',
+    'rest_framework.authtoken',
 
     'mario_stats',
 ]
