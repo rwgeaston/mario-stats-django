@@ -76,14 +76,14 @@ class Game(models.Model):
 
 
 class HandicapSnapshot(models.Model):
-    game = models.OneToOneField(Game, on_delete=models.PROTECT, related_name='handicap_snapshot')
+    game = models.OneToOneField(Game, on_delete=models.CASCADE, related_name='handicap_snapshot')
 
     def __str__(self):
         return f'{self.game} ({self.game.creation_timestamp})'
 
 
 class PlayerHandicapSnapshot(models.Model):
-    snapshot = models.ForeignKey(HandicapSnapshot, on_delete=models.PROTECT, related_name='players')
+    snapshot = models.ForeignKey(HandicapSnapshot, on_delete=models.CASCADE, related_name='players')
     person = models.ForeignKey(Person, on_delete=models.PROTECT)
     handicap = models.DecimalField(max_digits=4, decimal_places=2)
 
@@ -133,7 +133,7 @@ class Character(models.Model):
 
 class Player(models.Model):
     person = models.ForeignKey(Person, on_delete=models.PROTECT)
-    game = models.ForeignKey(Game, on_delete=models.PROTECT, related_name='players')
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='players')
     seat_position = models.IntegerField()
     red_team = models.BooleanField()
     character = models.ForeignKey(Character, on_delete=models.PROTECT)
