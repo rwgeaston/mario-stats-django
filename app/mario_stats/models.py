@@ -87,12 +87,20 @@ class Game(models.Model):
     def change_handicaps(self, players):
         # Do not call this unless winning score was enough to change handicaps!
         # It doesn't recheck that's true
+        computer_handicap = 0
         for player in players:
             if player.red_team is (self.outcome == self.RED_WON):
                 player.person.handicap += Decimal('0.25')
             else:
                 player.person.handicap -= Decimal('0.25')
             player.person.save()
+            if player.person.name == 'Computer':
+                computer_handicap = player.person.handicap
+
+        # If computer handicap is non-zero we have to go change everyone now :(
+        for person in Person.objects.all():
+            person.handicap -= computer_handicap
+            person.save()
 
     def set_player_outcomes(self, players):
         for player in players:
