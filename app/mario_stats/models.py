@@ -1,6 +1,8 @@
 from datetime import datetime
-
+from decimal import Decimal
 from django.db import models
+
+from .game_outcomes import calculate_scores_needed
 
 
 class Person(models.Model):
@@ -35,26 +37,34 @@ class Game(models.Model):
         players = list(self.players.all())
         reds = [player for player in players if player.red_team]
         blues = [player for player in players if not player.red_team]
-        red_team = ' & '.join(reds)
-        blue_team = ' & '.join(blues)
+        red_team = ' & '.join([str(player) for player in reds])
+        blue_team = ' & '.join([str(player) for player in blues])
 
         return f'{red_team} vs {blue_team}'
 
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
-        if self.red_score:
+        if self.red_score and self.outcome == self.NOT_PLAYED:
             if not self.submission_timestamp:
                 self.submission_timestamp = datetime.now()
 
-            needed_scores = self.calculate_needed()
-            if self.red_score >= needed_scores['red']:
+            needed_scores = self.get_scores_needed()
+            blue_score = 410 - self.red_score
+            players = list(self.players.all())
+            if self.red_score >= needed_scores['to win']['red']:
                 self.outcome = self.RED_WON
-            elif self.red_score <= needed_scores['blue']:
+                if self.red_score >= needed_scores['to change']['red']:
+                    self.change_handicaps(players)
+            elif blue_score >= needed_scores['to win']['blue']:
                 self.outcome = self.BLUE_WON
+                if blue_score >= needed_scores['to change']['blue']:
+                    self.change_handicaps(players)
             else:
                 self.outcome = self.DRAW
-        else:
-            self.outcome = self.NOT_PLAYED
-            self.submission_timestamp = None
+
+            self.set_player_outcomes(players)
+
+            for player in players:
+                player.save()
 
         response = super().save(force_insert, force_update, using, update_fields)
         if not hasattr(self, 'handicap_snapshot'):
@@ -71,8 +81,27 @@ class Game(models.Model):
 
         return response
 
-    def calculate_needed(self):
-        return {'red': self.red_score, 'blue': self.red_score}
+    def get_scores_needed(self):
+        return calculate_scores_needed(self)
+
+    def change_handicaps(self, players):
+        # Do not call this unless winning score was enough to change handicaps!
+        # It doesn't recheck that's true
+        for player in players:
+            if player.red_team is (self.outcome == self.RED_WON):
+                player.person.handicap += Decimal('0.25')
+            else:
+                player.person.handicap -= Decimal('0.25')
+            player.person.save()
+
+    def set_player_outcomes(self, players):
+        for player in players:
+            if self.outcome in [self.DRAW, self.NOT_PLAYED]:
+                player.outcome = self.outcome
+            elif player.red_team is (self.outcome == self.RED_WON):
+                player.outcome = player.WON
+            else:
+                player.outcome = player.LOST
 
 
 class HandicapSnapshot(models.Model):

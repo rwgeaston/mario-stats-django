@@ -9,6 +9,8 @@ from mario_stats.models import (
     Vehicle,
     Glider,
     Character,
+    HandicapSnapshot,
+    PlayerHandicapSnapshot,
 )
 
 
@@ -27,8 +29,34 @@ class PlayerSerializer(serializers.ModelSerializer):
         )
 
 
+class PlayerHandicapSnapshotSerializer(serializers.ModelSerializer):
+    person = serializers.SlugRelatedField(slug_field='name', queryset=Person.objects.all())
+
+    class Meta:
+        model = PlayerHandicapSnapshot
+        exclude = (
+            'snapshot',
+        )
+
+
+class HandicapSnapshotSerializer(serializers.ModelSerializer):
+    players = PlayerHandicapSnapshotSerializer(many=True)
+
+    class Meta:
+        model = HandicapSnapshot
+        exclude = (
+            'game',
+        )
+
+
 class GameSerializer(serializers.ModelSerializer):
     players = PlayerSerializer(many=True)
+    handicap_snapshot = HandicapSnapshotSerializer(read_only=True)
+    scores_needed = serializers.SerializerMethodField()
+
+    @staticmethod
+    def get_scores_needed(game):
+        return game.get_scores_needed()
 
     class Meta:
         model = Game
