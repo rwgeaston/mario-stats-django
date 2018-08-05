@@ -14,6 +14,26 @@ from mario_stats.models import (
 )
 
 
+class DynamicFieldsModelSerializer(serializers.ModelSerializer):
+    """
+    A ModelSerializer that takes an additional `fields` argument that
+    controls which fields should be displayed.
+    """
+
+    def __init__(self, *args, **kwargs):
+        # Instantiate the superclass normally
+        super(DynamicFieldsModelSerializer, self).__init__(*args, **kwargs)
+
+        fields = self.context['request'].query_params.get('fields')
+        if fields:
+            fields = fields.split(',')
+            # Drop any fields that are not specified in the `fields` argument.
+            allowed = set(fields)
+            existing = set(self.fields.keys())
+            for field_name in existing - allowed:
+                self.fields.pop(field_name)
+
+
 class PlayerSerializer(serializers.ModelSerializer):
     person = serializers.SlugRelatedField(slug_field='name', queryset=Person.objects.all())
     tyres = serializers.SlugRelatedField(slug_field='name', queryset=Tyre.objects.all())
@@ -49,7 +69,7 @@ class HandicapSnapshotSerializer(serializers.ModelSerializer):
         )
 
 
-class GameSerializer(serializers.ModelSerializer):
+class GameSerializer(DynamicFieldsModelSerializer):
     players = PlayerSerializer(many=True)
     handicap_snapshot = HandicapSnapshotSerializer(read_only=True)
     scores_needed = serializers.SerializerMethodField()
