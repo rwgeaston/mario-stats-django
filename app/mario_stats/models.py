@@ -5,7 +5,7 @@ from django.db import models
 
 class Person(models.Model):
     name = models.CharField(max_length=30, unique=True)
-    handicap = models.DecimalField(max_digits=4, decimal_places=2)
+    handicap = models.DecimalField(max_digits=4, decimal_places=2, default=0)
 
     def __str__(self):
         return self.name
@@ -18,16 +18,45 @@ class Game(models.Model):
     ian_watched = models.BooleanField(default=False)
     forced_team_selection = models.BooleanField(default=False)
 
+    RED_WON = 1
+    BLUE_WON = 2
+    DRAW = 3
+    NOT_PLAYED = 4
+
+    outcome_choices = (
+        (RED_WON, 'won'),
+        (BLUE_WON, 'lost'),
+        (DRAW, 'draw'),
+        (NOT_PLAYED, 'not played'),
+    )
+    outcome = models.IntegerField(choices=outcome_choices, default=NOT_PLAYED)
+
     def __str__(self):
         players = list(self.players.all())
         reds = [player for player in players if player.red_team]
         blues = [player for player in players if not player.red_team]
-        red_team = '{} & {}'.format(*reds)
-        blue_team = '{} & {}'.format(*blues)
+        red_team = ' & '.join(reds)
+        blue_team = ' & '.join(blues)
 
         return f'{red_team} vs {blue_team}'
 
     def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
+        if self.red_score:
+            if not self.submission_timestamp:
+                self.submission_timestamp = datetime.now()
+
+            needed_scores = self.calculate_needed()
+            if self.red_score >= needed_scores['red']:
+                self.outcome = self.RED_WON
+            elif self.red_score <= needed_scores['blue']:
+                self.outcome = self.BLUE_WON
+            else:
+                self.outcome = self.DRAW
+        else:
+            self.outcome = self.NOT_PLAYED
+            self.submission_timestamp = None
+
+        response = super().save(force_insert, force_update, using, update_fields)
         if not hasattr(self, 'handicap_snapshot'):
             # First time we save the game, we snapshot everyone's handicaps when it was created
             handicap_snapshot = HandicapSnapshot(game=self)
@@ -40,7 +69,10 @@ class Game(models.Model):
                     handicap=person.handicap
                 ).save()
 
-        return super().save(force_insert, force_update, using, update_fields)
+        return response
+
+    def calculate_needed(self):
+        return {'red': self.red_score, 'blue': self.red_score}
 
 
 class HandicapSnapshot(models.Model):
@@ -103,7 +135,6 @@ class Player(models.Model):
     person = models.ForeignKey(Person, on_delete=models.PROTECT)
     game = models.ForeignKey(Game, on_delete=models.PROTECT, related_name='players')
     seat_position = models.IntegerField()
-    vehicle = models.ForeignKey(Vehicle, on_delete=models.PROTECT)
     red_team = models.BooleanField()
     character = models.ForeignKey(Character, on_delete=models.PROTECT)
     vehicle = models.ForeignKey(Vehicle, on_delete=models.PROTECT)
