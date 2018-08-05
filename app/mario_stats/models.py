@@ -1,6 +1,8 @@
 from datetime import datetime
 from decimal import Decimal
+
 from django.db import models
+from django.conf import settings
 
 from .game_outcomes import calculate_scores_needed
 
@@ -78,6 +80,8 @@ class Game(models.Model):
             for player in players:
                 player.save()
 
+            self.check_handicap_decay()
+
         response = super().save(force_insert, force_update, using, update_fields)
         if not hasattr(self, 'handicap_snapshot'):
             # First time we save the game, we snapshot everyone's handicaps when it was created
@@ -106,13 +110,15 @@ class Game(models.Model):
             else:
                 player.person.handicap -= Decimal('0.25')
             player.person.save()
+
             if player.person.name == 'Computer':
                 computer_handicap = player.person.handicap
 
         # If computer handicap is non-zero we have to go change everyone now :(
-        for person in Person.objects.all():
-            person.handicap -= computer_handicap
-            person.save()
+        if computer_handicap:
+            for person in Person.objects.all():
+                person.handicap -= computer_handicap
+                person.save()
 
     def set_player_outcomes(self, players):
         for player in players:
@@ -122,6 +128,33 @@ class Game(models.Model):
                 player.outcome = player.WON
             else:
                 player.outcome = player.LOST
+
+    def check_handicap_decay(self):
+        games_generated = self.__class__.objects.count()
+        if games_generated >= settings.START_DECAYING_AT and games_generated % 10 == 0:
+            self.decay_not_recent_players(50)
+
+    def decay_not_recent_players(self, game_count):
+        players_last_fifty_games = self.get_recent_players(game_count)
+        for person in Person.objects.all():
+            if person.id in players_last_fifty_games:
+                continue
+
+            if person.handicap <= 0:
+                continue
+
+            person.handicap -= Decimal('0.25')
+            person.save()
+
+    def get_recent_players(self, game_count):
+        all_recent_players = set()
+        for _, game in zip(
+                range(game_count),
+                self.__class__.objects.all().order_by('-creation_timestamp')
+        ):
+            for player in game.players.all():
+                all_recent_players.add(player.person.id)
+        return all_recent_players
 
 
 class HandicapSnapshot(models.Model):

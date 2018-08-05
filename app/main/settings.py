@@ -39,6 +39,9 @@ USE_L10N = True
 
 STATIC_URL = '/static/'
 
+# at bedfont we didn't introduce handicap decay rule until 200 games in so for consistency let's keep that
+START_DECAYING_AT = 200
+
 try:
     from .local_settings import *  # pylint: disable=wildcard-import,unused-wildcard-import
 except ImportError:
