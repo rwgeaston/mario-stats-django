@@ -1,0 +1,17 @@
+{% extends "admin/login.html" %}
+
+{% block content %}
+  {{ block.super }}
+
+  <div>
+    Please login with google below.  I don't want any personal data at all, just some kind of authentication. If you just want GET access to the API, you don't need to login at all.
+  </div>
+
+ <div class="submit-row">
+    <div id="google-login">
+       <a href="{% url 'social:begin' 'google-oauth2' %}?{{ REDIRECT_QUERYSTRING }}"
+          id="google-btn">Google&nbsp;Login</a>
+    </div>
+  </div>
+
+{% endblock %}
