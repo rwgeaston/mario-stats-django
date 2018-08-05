@@ -5,9 +5,21 @@ from django.db import models
 from .game_outcomes import calculate_scores_needed
 
 
+def current_average_handicap():
+    sum_handicaps = 0
+    count_people = 0
+    for person in Person.objects.all():
+        sum_handicaps += person.handicap
+        count_people += 1
+    if not count_people:
+        return Decimal('0.0')
+
+    return Decimal(sum_handicaps/count_people)
+
+
 class Person(models.Model):
     name = models.CharField(max_length=30, unique=True)
-    handicap = models.DecimalField(max_digits=4, decimal_places=2, default=0)
+    handicap = models.DecimalField(max_digits=4, decimal_places=2, default=current_average_handicap)
 
     def __str__(self):
         return self.name
