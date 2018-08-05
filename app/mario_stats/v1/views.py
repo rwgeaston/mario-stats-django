@@ -1,5 +1,6 @@
 # pylint: disable=too-many-ancestors
 from rest_framework import viewsets
+from rest_framework import filters
 
 from mario_stats.models import Game
 from mario_stats.models import Person
@@ -11,6 +12,8 @@ class GameViewSet(viewsets.ModelViewSet):
 
     queryset = Game.objects.all()
     serializer_class = GameSerializer
+    filter_backends = (filters.OrderingFilter,)
+    ordering_fields = ('creation_timestamp',)
 
 
 class PersonViewSet(viewsets.ModelViewSet):
