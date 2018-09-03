@@ -12,4 +12,5 @@ INSTALLED_APPS = [
     'social_django',
 
     'mario_stats',
+    'rwge',
 ]
