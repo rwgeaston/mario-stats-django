@@ -3,3 +3,6 @@ djangorestframework==3.8.2
 pylint==1.9.2
 django-nested-admin==3.0.21
 social-auth-app-django==2.1.0
+git+git://github.com/rwgeaston/django-password-generator
+django-filter==2.0.0
+unidecode

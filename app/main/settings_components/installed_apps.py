@@ -12,4 +12,7 @@ INSTALLED_APPS = [
     'social_django',
 
     'mario_stats',
+
+    'django_filters',
+    'password_generator',
 ]

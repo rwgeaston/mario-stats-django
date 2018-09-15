@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'api/v1/', include(v1_router.urls)),
     url(r'^_nested_admin/', include('nested_admin.urls')),
     url(r'^auth/', include('social_django.urls', namespace='social')),
+    path('api/v1/', include('password_generator.urls')),
 ]
